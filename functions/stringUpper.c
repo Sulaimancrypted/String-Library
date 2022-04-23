@@ -1,15 +1,14 @@
 #include<stdio.h>
 char * stringUpper(char * s){
-        char *t = s;
-        
-        int i = 0;
-        while ( *t != '\0' ){
-                if (*t >= 'a' && *t <= 'z' ){
-                        *t = *t - ('a' - 'A');
-                }
-                t++;
+    char *t = s;
+    int i = 0;
+    while ( *t != '\0' ){
+        if (*t >= 'a' && *t <= 'z' ){
+                *t = *t - ('a' - 'A');
         }
-        return s;
+        t++;
+    }
+    return s;
 }
 
 int main(){
