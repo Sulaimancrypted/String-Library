@@ -18,7 +18,7 @@ int palindrome(char *str)
 
 int main(int argc, char const *argv[])
 {
-    char string[] = "madav";
+    char string[] = "madam";
     printf("%d",palindrome(string));
     return 0;
 }
