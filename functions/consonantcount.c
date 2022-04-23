@@ -17,6 +17,6 @@ int consonantcount(char * s){
 }
 int main()
 {
-    printf("%d",consonantcount("zeus"));
+    printf("%d",consonantcount("hello there"));
     return 0;
 }
