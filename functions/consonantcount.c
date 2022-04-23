@@ -1,6 +1,6 @@
 
 #include<stdio.h>
-#include "D:\BCA\SEM - 4\ST\String Library\library.c"
+//#include "D:\BCA\SEM - 4\ST\String Library\library.c"
 int consonantcount(char * s){
     char *t = s;
     
@@ -10,7 +10,7 @@ int consonantcount(char * s){
                 *t == 'I' ||*t == 'o' || *t == 'O'|| *t == 'u' || *t == 'U'){
                 cnt++;
             }
-            
+
             t++;
     }
     return strlength(s) -  cnt;

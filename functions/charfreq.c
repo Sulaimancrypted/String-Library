@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include "D:\BCA\SEM - 4\ST\String Library\library.c"
+//#include "D:\BCA\SEM - 4\ST\String Library\library.c"
 
 int charfreq(char *string,char *string_1){
     int l = 0;

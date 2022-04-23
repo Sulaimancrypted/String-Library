@@ -1,4 +1,4 @@
-#include<stdio.h>
+//#include<stdio.h>
 char * stringLower(char * s){
         char *t = s;
         
