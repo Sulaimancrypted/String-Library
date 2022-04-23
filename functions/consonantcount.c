@@ -10,6 +10,7 @@ int consonantcount(char * s){
                 *t == 'I' ||*t == 'o' || *t == 'O'|| *t == 'u' || *t == 'U'){
                 cnt++;
             }
+            
             t++;
     }
     return strlength(s) -  cnt;
