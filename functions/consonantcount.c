@@ -3,7 +3,6 @@
 //#include "D:\BCA\SEM - 4\ST\String Library\library.c"
 int consonantcount(char * s){
     char *t = s;
-    
     int cnt = 0;
     while ( *t != '\0' ){
             if (*t == 'a' || *t == 'A' || *t == 'e' || *t == 'E'|| *t == 'i' ||
