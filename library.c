@@ -99,3 +99,52 @@ int vowelcount(char * s){
    }
    return cnt;
 }
+
+void asciiConverter(char *p) // function def
+{
+    printf("\n String with ASCII values...\n");
+    while(*p!='\0')
+    {
+        printf("\n%c=%d",*p,*p);
+        p++;
+    }
+}
+
+int countSpaces(char str[]) // function definition
+{
+
+    int i, c = 0;
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] == ' ')
+            c++;
+    }
+    return c;
+}
+
+ int countWords(char str[])                   //function definition
+{
+    int i,c=0;
+    for(i=0; str[i]!='\0';i++)
+    {
+    if(str[i]==' ')
+    c++;
+    }
+    c=c+1;
+    return c;
+}
+
+int searchChar(char *p, char ch) // function definition
+{
+    int f = 0;
+    while (*p != '\0')
+    {
+        if (*p == ch)
+        {
+            f = 1;
+            break;
+        }
+        p++;
+    }
+    return f;
+}
