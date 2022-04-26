@@ -148,3 +148,85 @@ int searchChar(char *p, char ch) // function definition
     }
     return f;
 }
+
+void countAllCharType(char str[])
+{
+    int i,c1=0,c2=0,c3=0,c4=0;
+     for(i=0;str[i]!='\0';i++)
+     {
+       if(str[i]>=65 && str[i]<=90) //A = 65 ...Z= 90
+        {
+            c1++;
+        }
+        else
+        {
+            if(str[i]>=97 && str[i]<=122)//a = 97...z = 122
+            {
+                c2++;
+            }
+            else
+            {
+                if(str[i]>=48 && str[i]<=57)// 0 = 47 .... 9 = 55
+                {
+                c3++;
+                }
+                else 
+                {
+                    c4 ++;
+                }
+            }
+           
+        }
+    }
+    printf("\n Upper = %d\n Lower = %d\n Digits = %d\n other characters = %d",c1,c2,c3,c4);
+}
+
+int compare_string(char *first, char *second)
+{
+   while(*first==*second)
+   {
+      if ( *first == '\0' || *second == '\0' )
+         break;
+ 
+      first++;
+      second++;
+   }
+   if( *first == '\0' && *second == '\0' )
+      return 0;
+   else
+      return -1;
+}
+
+void concatenate(char *Str1, char *Str2)
+{
+	while(*Str1)
+	{
+		Str1++;
+	}
+	
+	while(*Str2)
+	{
+		*Str1 = *Str2;
+		*Str1++;
+		*Str2++;
+  	}
+  	*Str1 = '\0';
+}
+
+void copy_string(char *target, char *source)
+{
+    while(*source)
+    {
+        *target = *source;        
+        source++;        
+        target++;
+    }    
+    *target = '\0';
+}
+
+char *stroccur(char *string, char letter){
+   char *ptr;
+   while (*string!=letter && *string!='\0')
+      ptr=++string;
+      return (ptr);
+   } 
