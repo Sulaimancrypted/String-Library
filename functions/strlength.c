@@ -3,17 +3,7 @@
 // countlength
 
 #include <stdio.h>
-// int countLength(char*);
-// int countlength(char *p) // function definition
-// {
-//     int c = 0;
-//     while (*p != '\0')
-//     {
-//         c++;
-//         p++;
-//     }
-//     return c;
-// } // function declaration
+
 
 int strlength(char *string){
    int l = 0;

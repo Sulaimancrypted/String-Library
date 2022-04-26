@@ -35,17 +35,3 @@ int main()
         printf("\ncharacter is NOT Present in String");
     return 0;
 }
-int searchChar(char *p, char ch) // function definition
-{
-    int f = 0;
-    while (*p != '\0')
-    {
-        if (*p == ch)
-        {
-            f = 1;
-            break;
-        }
-        p++;
-    }
-    return f;
-}

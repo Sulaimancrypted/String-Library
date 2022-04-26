@@ -22,8 +22,7 @@ int countSpaces(char str[]) // function definition
 {
 
     int i, c = 0;
-    for (i = 0; str[i] != '\0'; i++)
-    {
+    for (i = 0; str[i] != '\0'; i++){
         if (str[i] == ' ')
             c++;
     }
