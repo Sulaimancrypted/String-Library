@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 
-int strlength(char *string){
+int strLength(char *string){
    int l = 0;
    while(*string != '\0'){
       l++;
@@ -18,10 +18,10 @@ int main()
 {
     char str[10];
     int c;
-    printf("\nEnter String");
+    printf("\nEnter String: ");
     gets(str);
 
-    c = strlength(str); // function calling
-    printf("\nWords = %d", c);
+    c = strLength(str); 
+    printf("\nLength = %d", c);
     return 0;
 }

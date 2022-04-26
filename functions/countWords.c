@@ -16,7 +16,7 @@ int main()
     return 0;
 }
 
-    int countWords(char str[])                   //function definition
+int countWords(char str[])                   //function definition
 {
     int i,c=0;
     for(i=0; str[i]!='\0';i++){

@@ -15,6 +15,6 @@ int main()
 {
     char str[] = "EPITHELIAL";
     printf("%s", stringLower(str));
-    printf("\n%d", ('a' - 'A'));
+    //printf("\n%d", ('a' - 'A'));
     return 0;
 }

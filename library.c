@@ -15,7 +15,7 @@ char *substr(char *string, char *substring){
    }
 }
 
-int strlength(char *string){
+int strLength(char *string){
    int l = 0;
    while(*string != '\0'){
       l++;
@@ -26,7 +26,7 @@ int strlength(char *string){
 
 int palindrome(char *str){
    int l = 0;
-   int h = strlength(str) - 1;
+   int h = strLength(str) - 1;
    while (h > l){
       if(str[l++] != str[h--]){
          return 0 ;
@@ -52,7 +52,7 @@ char *strrev (char *str){
    int len = 0;
    char c;
 
-   len = strlength(str); 
+   len = strLength(str); 
    for(i = 0; i < (len/2); i++){
       c = str[i];
       str [i] = str[len - i - 1];
@@ -61,7 +61,7 @@ char *strrev (char *str){
    return str;
 }
 
-char *stringlower(char * s){
+char *stringLower(char * s){
    char *t = s;
    
    int i = 0;
@@ -74,7 +74,7 @@ char *stringlower(char * s){
    return s;
 }
 
-char *stringupper(char * s){
+char *stringUpper(char * s){
    char *t = s;
 
    int i = 0;
@@ -87,18 +87,7 @@ char *stringupper(char * s){
    return s;
 }
 
-int vowelcount(char * s){
-   char *t;  
-   int cnt = 0;
-   while ( *t != '\0' ){
-      if (*t == 'a' || *t == 'A' || *t == 'e' || *t == 'E'|| *t == 'i' ||
-          *t == 'I' ||*t == 'o' || *t == 'O'|| *t == 'u' || *t == 'U'){
-          cnt++;
-      }
-      t++;
-   }
-   return cnt;
-}
+
 
 void asciiConverter(char *p) // function def
 {
@@ -124,14 +113,13 @@ int countSpaces(char str[]) // function definition
 
  int countWords(char str[])                   //function definition
 {
-    int i,c=0;
-    for(i=0; str[i]!='\0';i++)
-    {
-    if(str[i]==' ')
-    c++;
-    }
-    c=c+1;
-    return c;
+   int i,c=0;
+   for(i=0; str[i]!='\0';i++){
+      if(str[i]==' ')
+      c++;
+   }
+   c=c+1;
+   return c;
 }
 
 int searchChar(char *p, char ch) // function definition
@@ -181,7 +169,7 @@ void countAllCharType(char str[])
     printf("\n Upper = %d\n Lower = %d\n Digits = %d\n other characters = %d",c1,c2,c3,c4);
 }
 
-int compare_string(char *first, char *second)
+int compareString(char *first, char *second)
 {
    while(*first==*second)
    {
@@ -213,7 +201,7 @@ void concatenate(char *Str1, char *Str2)
   	*Str1 = '\0';
 }
 
-void copy_string(char *target, char *source)
+void copyString(char *target, char *source)
 {
     while(*source)
     {
@@ -224,9 +212,36 @@ void copy_string(char *target, char *source)
     *target = '\0';
 }
 
-char *stroccur(char *string, char letter){
+char *strOccur(char *string, char letter){
    char *ptr;
    while (*string!=letter && *string!='\0')
       ptr=++string;
       return (ptr);
-   } 
+}
+
+int consonantCount(char * s){
+    char *t = s;
+    int cnt = 0;
+    while ( *t != '\0' ){
+            if (*t == 'a' || *t == 'A' || *t == 'e' || *t == 'E'|| *t == 'i' ||
+                *t == 'I' ||*t == 'o' || *t == 'O'|| *t == 'u' || *t == 'U'){
+                cnt++;
+            }
+
+            t++;
+    }
+    return strLength(s) -  cnt;
+}
+
+int vowelCount(char * s){
+   char *t = s;  
+   int cnt = 0;
+   while ( *t != '\0' ){
+      if (*t == 'a' || *t == 'A' || *t == 'e' || *t == 'E'|| *t == 'i' ||
+          *t == 'I' ||*t == 'o' || *t == 'O'|| *t == 'u' || *t == 'U'){
+          cnt++;
+      }
+      t++;
+   }
+   return cnt;
+}

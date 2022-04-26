@@ -12,7 +12,7 @@ int consonantcount(char * s){
 
             t++;
     }
-    return strlength(s) -  cnt;
+    return strLength(s) -  cnt;
 }
 int main()
 {

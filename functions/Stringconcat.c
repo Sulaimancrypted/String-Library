@@ -5,17 +5,17 @@ void concatenate(char *, char *);
 
 int main()
 {
-  	char Str1[100], Str2[100];
+  	char str[100], str2[100];
  
   	printf("\n Please Enter the First :  ");
-  	gets(Str1);
-  	
+  	gets(str);
+												
   	printf("\n Please Enter the Second :  ");
-  	gets(Str2);
+  	gets(str2);
   	
-  	concatenate(Str1, Str2);
+  	concatenate(str, str2);
 
-  	printf("\n After the Concatenate = %s", Str1);
+  	printf("\n After the Concatenate = %s", str);
   	
   	return 0;
 }

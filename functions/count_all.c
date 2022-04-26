@@ -7,8 +7,7 @@ int main()
     char str[20];
     printf("\n Enter String : ");
     gets(str);
-
-    count(str);
+    countAllCharType(str);
 
     return 0;
 }

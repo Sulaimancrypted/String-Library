@@ -17,8 +17,11 @@ char *substr(char *string, char *substring){
 }
 int main() {
    char ch[] = "helloworld";
-   char ch2[] = "v";
-   printf("%s",substr(ch,ch2));
+   char ch2[] = "x";
+   if(substr(ch,ch2) != NULL)
+      printf("%s",substr(ch,ch2));
+   else
+      printf("Substring not found.");
 
    return 0;
 }

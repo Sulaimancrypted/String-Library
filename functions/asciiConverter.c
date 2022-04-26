@@ -3,11 +3,10 @@
 // ASCII converter
 
 #include<stdio.h>
-void print(char*);
 int main()
 {
-    char str[10];
-    printf("\n Enter String=");
+    char str[100];
+    printf("\n Enter String: ");
     gets(str);
     asciiConverter(str); // function calling
     return 0;
