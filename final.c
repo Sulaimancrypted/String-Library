@@ -23,10 +23,10 @@ int main()
             printf("\n Enter String: ");
             gets(str);
             
-            printf("Enter a character to find its frequency in string 1: ");
+            printf(" Enter a character to find its frequency in string 1: ");
             gets(str2);
             
-            printf("Frequency of character is %d",charfreq(str,str2));
+            printf(" Frequency of character is %d",charfreq(str,str2));
             getchar();
             break;
         case 3:
