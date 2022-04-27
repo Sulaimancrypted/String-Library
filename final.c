@@ -1,10 +1,12 @@
 #include "D:\BCA\SEM - 4\ST\String Library\library.c"
 int main()
 {
-    int opt = 1,c;
+    int opt = 1,c,d,e;
+    float a,b;
     char str[100],str2[100],ch;
-    while (opt != 18){
-        printf("\n\n1. ASCII CONVERSION OF CHARACTERS IN STRING USING asciiConverter(str)\n2. FINDING FREQUENCY OF A GIVEN CHARACTER IN STRING USING charfreq(string,char)\n3. COUNT THE NUMBER OF CONSONANTS IN A STRING USING consonantCount(string)\n4. COUNT THE NUMBER OF UPPERCASE / LOWERCASE / DIGITS / OTHER CHARACTERS USING countAllCharType(string)\n5. COUNT NUMBER OF SPACES IN A GIVEN STRING USING countSpaces(string)\n6. COUNT NUMBER OF WORDS IN A STRING USING countWords(string)\n7. CHECK WHETHER A GIVEN STRING IS PALINDROME USING palindrome(string)\n8. CHECK WHETHER A GIVEN CHARACTER IS PART OF STRING USING searchChar(string,char)\n9. COMPARE 2 GIVEN STRINGS AND FIND WHETHER THEY ARE EQUAL OR DIFFERENT USING compareString(string,string)\n10. CONCATENATE 2 STRINGS USING concatenate(string,string)\n11. COPY A STRING FROM SOURCE TO DESTINATION STRING USING copyString(string,string)\n12. CONVERT A STRING TO LOWERCASE USING stringLower(string)\n13. CONVERT A STRING TO UPPERCASE USING stringUpper(string)\n14. REVERSE A GIVEN STRING USING strrev(string)\n15. FIND THE LENGTH OF GIVEN STRING USING strLength(string)\n16. GET THE SUB-STRING FROM FIRST GIVEN STRING FROM THE FIRST OCCURANCE OF SECOND STRING USING substr(string,string)\n17. COUNT THE NUMBER OF VOWELS ON A GIVEN STRING USING vowelCount(string)\n18. EXIT MENU\n ENTER YOUR OPTION : ");
+    printf(".................... LIBRARY FUNCTIONS .....................\n\n\n----------------------- PROJECT BY -------------------------\n\n   SULAIMAN MOHAMMADYASIN MUTAWALLI\n   PRADNESH PRATAP MORE\n   OMKAR PRABHANS SHARMA\n\nPROJECT GUIDE - PROF. B.D PATIL");
+    while (opt != 20){
+        printf("\n\n1. ASCII CHARACTER CONVERSION\n2. CHARACTER FREQUENCY\n3. COUNT CONSONANTS\n4. COUNT CHARACTER TYPES\n5. COUNT SPACES\n6. COUNT WORDS\n7. CHECK PALINDROME\n8. CHARACTER SEARCH\n9. COMPARE STRINGS\n10. CONCATENATE STRINGS\n11. COPY STRING\n12. LOWERCASE STRING\n13. UPPERCASE STRING\n14. REVERSE STRING\n15. STRING LENGTH\n16. RETURN SUBSTRING\n17. VOWEL COUNT\n18. MIN / MAX OF 2 NUMBERS\n19. AVERAGE NUMBERS\n20. EXIT MENU\n\n ENTER YOUR OPTION : ");
         scanf("%d",&opt);
         switch (opt)
         {
@@ -14,6 +16,7 @@ int main()
             gets(str);
             
             asciiConverter(str);
+            getchar();
             break;
         case 2:
             getchar();
@@ -24,7 +27,7 @@ int main()
             gets(str2);
             
             printf("Frequency of character is %d",charfreq(str,str2));
-            
+            getchar();
             break;
         case 3:
             getchar();
@@ -32,6 +35,7 @@ int main()
             gets(str);
             
             printf("The number of consonants in given string are %d.",consonantCount(str));
+            getchar();
             break;
         case 4:
             getchar();
@@ -39,6 +43,7 @@ int main()
             gets(str);
             
             countAllCharType(str);
+            getchar();
             break;
         case 5:
             getchar();
@@ -48,6 +53,7 @@ int main()
             c = countSpaces(str);
             
             printf("\nNumber of Spaces = %d", c);
+            getchar();
             break;
         case 6:
             getchar();
@@ -57,6 +63,7 @@ int main()
             c=countWords(str);                           //function calling
             
             printf("\nWords = %d",c);
+            getchar();
             break;
         case 7:
             getchar();
@@ -67,6 +74,7 @@ int main()
                 printf("The string is palindrome.");
             else
                 printf("The string is not palindrome.");
+            getchar();
             break;
         case 8:
             getchar();
@@ -82,6 +90,7 @@ int main()
                 printf("\nCharacter is Present");
             else
                 printf("\ncharacter is NOT Present in String");
+            getchar();
             break;
         case 9:
             getchar();
@@ -97,6 +106,7 @@ int main()
                printf("\nBoth strings are same.");
             else
                printf("Entered strings are not equal.");
+            getchar();
             break;
         case 10:
             getchar();
@@ -109,6 +119,7 @@ int main()
   	        concatenate(str, str2);
 
   	        printf("\n After the Concatenate = %s", str);
+            getchar();
             break;
         case 11:
             getchar();
@@ -117,7 +128,8 @@ int main()
             
             copyString(str2,str);    
             
-            printf("Target string is \"%s\"\n", str2); 
+            printf("Target string is \"%s\"\n", str2);
+            getchar(); 
             break;
         case 12:
             getchar();
@@ -125,6 +137,7 @@ int main()
             gets(str);
             
             printf("%s", stringLower(str));
+            getchar();
             break;
         case 13:
             getchar();
@@ -132,6 +145,7 @@ int main()
             gets(str);
             
             printf("%s", stringUpper(str));
+            getchar();
             break;
         case 14:
             getchar();
@@ -139,6 +153,7 @@ int main()
             gets(str);
             
             printf("Output = %s",strrev(str));
+            getchar();
             break;
         case 15:
             getchar();
@@ -148,6 +163,7 @@ int main()
             c = strLength(str); 
             
             printf("\nLength = %d", c);
+            getchar();
             break;
         case 16:
             getchar();
@@ -160,6 +176,7 @@ int main()
                 printf("%s is the sub string",substr(str,str2));
             else
                 printf("Substring not found.");
+            getchar();
             break;
         case 17:
             getchar();
@@ -167,11 +184,30 @@ int main()
             gets(str);
         
             printf("Number of vowels are %d",vowelCount(str));
+            getchar();
             break;
         case 18:
-            printf("Exiting Menu.....");
+            printf("Enter first number: ");
+            scanf("%d",&d);
+            printf("Enter second number: ");
+            scanf("%d",&e);
+            minmax(d,e);
+            getchar();
+            getchar();
             break;
-        
+        case 19:
+            printf("Enter first number: ");
+            scanf("%f",&a);
+            printf("Enter second number: ");
+            scanf("%f",&b);
+            printf("Average of 2 numbers is %.2f\n",avg(a,b));
+            getchar();
+            getchar();
+            break;
+        case 20:
+            printf("Exiting Menu.....");
+            getchar();
+            break;
         default:
             printf("Invalid Option try again...");
             break;

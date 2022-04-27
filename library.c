@@ -245,3 +245,17 @@ int vowelCount(char * s){
    }
    return cnt;
 }
+
+int minmax(int a, int b){
+   if(a == b)
+      printf("Both number are equal.\n");
+   if( a > b )
+      printf("%d is greater than %d\n",a,b);
+   else
+      printf("%d is greater than %d\n",b,a);
+
+}
+
+float avg(float a, float b){
+   return((a + b)/2);
+}
