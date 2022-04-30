@@ -259,3 +259,240 @@ int minmax(int a, int b){
 float avg(float a, float b){
    return((a + b)/2);
 }
+
+void matrixmul(){
+   int m,n,m1,n1;
+    printf("\nEnter Rows and columns of first matrix:\n");
+    scanf("%d %d",&m,&n);
+    printf("\nEnter Rows and columns of second matrix:\n");
+    scanf("%d %d",&m1,&n1);
+    if(n != m1){
+        printf("\nMultiplication of matrix with these dimensions is not possible.");
+        return;
+    }
+    int a[m][n],b[m1][n1],c[m][n1];
+    printf("\nEnter elements of first matrix:\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            printf("A[%d][%d] :",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\nEnter elements of second matrix:\n");
+    for (int i = 0; i < m1; i++){
+        for (int j = 0; j < n1; j++){
+            printf("B[%d][%d] :",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+    int sum = 0,o = 0,p = 0,q = 0,r = 0;
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n1; j++){
+            sum = 0;
+            o = i;
+            p = 0;
+            q = 0;
+            r = j;
+            for (int k = 0; k < n; k++){
+                sum = sum + a[o][p] * b[q][r];
+                q++;p++;
+            }
+            c[i][j] = sum;
+        }
+    }
+    printf("\nMatrix A :\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            printf("\t%d",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\nMatrix B :\n");
+    for (int i = 0; i < m1; i++){
+        for (int j = 0; j < n1; j++){
+            printf("\t%d",b[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\nMatrix AB :\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n1; j++){
+            printf("\t%d",c[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
+int power(int a,int b){
+    int i = 0,ans = 1;
+    while (i < b)
+    {
+       ans = ans * a;
+       i++;
+    }
+    return ans;
+    
+}
+
+int binToDec(long long n) {
+    int dec = 0, i = 0, rem;
+
+    while (n!=0) {
+        rem = n % 10;
+        n /= 10;
+        dec += rem * power(2, i);
+        ++i;
+    }
+    
+    return dec;
+}
+
+long long decToBin(int n) {
+  long long bin = 0;
+  int rem, i = 1;
+
+  while (n!=0) {
+    rem = n % 2;
+    n /= 2;
+    bin += rem * i;
+    i *= 10;
+  }
+
+  return bin;
+}
+
+void matrixAdd(){
+   int m,n,m1,n1;
+    printf("\nEnter Rows and columns of first matrix:\n");
+    scanf("%d %d",&m,&n);
+    printf("\nEnter Rows and columns of second matrix:\n");
+    scanf("%d %d",&m1,&n1);
+    if(n != n1 || m != m1){
+        printf("\nAddition or Subraction of matrix with these dimensions is not possible.");
+        getchar();
+        return;
+    }
+    int a[m][n],b[m1][n1],c[m1][n1];
+    printf("\nEnter elements of first matrix:\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            printf("A[%d][%d] :",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\nEnter elements of second matrix:\n");
+    for (int i = 0; i < m1; i++){
+        for (int j = 0; j < n1; j++){
+            printf("B[%d][%d] :",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+    
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n1; j++){
+            c[i][j] = a[i][j] + b[i][j];
+        }
+    }
+    printf("\nMatrix A :\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            printf("\t%d",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\nMatrix B :\n");
+    for (int i = 0; i < m1; i++){
+        for (int j = 0; j < n1; j++){
+            printf("\t%d",b[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\nMatrix C :\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n1; j++){
+            printf("\t%d",c[i][j]);
+        }
+        printf("\n");
+    }
+}
+void matrixSub(){
+   int m,n,m1,n1;
+    printf("\nEnter Rows and columns of first matrix:\n");
+    scanf("%d %d",&m,&n);
+    printf("\nEnter Rows and columns of second matrix:\n");
+    scanf("%d %d",&m1,&n1);
+    if(n != n1 || m != m1){
+        printf("\nAddition or Subraction of matrix with these dimensions is not possible.");
+        getchar();
+        return;
+    }
+    int a[m][n],b[m1][n1],c[m1][n1];
+    printf("\nEnter elements of first matrix:\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            printf("A[%d][%d] :",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\nEnter elements of second matrix:\n");
+    for (int i = 0; i < m1; i++){
+        for (int j = 0; j < n1; j++){
+            printf("B[%d][%d] :",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+    
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n1; j++){
+            c[i][j] = a[i][j] - b[i][j];
+        }
+    }
+    printf("\nMatrix A :\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            printf("\t%d",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\nMatrix B :\n");
+    for (int i = 0; i < m1; i++){
+        for (int j = 0; j < n1; j++){
+            printf("\t%d",b[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\nMatrix C :\n");
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n1; j++){
+            printf("\t%d",c[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void leapYear(){
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if (year % 400 == 0) {
+        printf("%d is a leap year.", year);
+    }
+    else if (year % 100 == 0) {
+        printf("%d is not a leap year.", year);
+   }
+    else if (year % 4 == 0) {
+        printf("%d is a leap year.", year);
+   }
+    else {
+        printf("%d is not a leap year.", year);
+   }
+   getchar();
+}
