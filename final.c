@@ -28,9 +28,10 @@ int main()
         printf("\n                              MATHEMATICAL FUNCTIONS\n");
         printf("\n                              18. MIN / MAX OF 2 NUMBERS");
         printf("\n                              19. AVERAGE NUMBERS");
-        printf("\n                              21. MATRIX MULTIPLICATION");
-        printf("\n                              22. MATRIX ADDITION");
-        printf("\n                              23. MATRIX SUBTRACTION");
+        printf("\n                              20. MATRIX MULTIPLICATION");
+        printf("\n                              21. MATRIX ADDITION");
+        printf("\n                              22. MATRIX SUBTRACTION");
+        printf("\n                              23. POWER OF NUMBER");        
         printf("\n                              24. BINARY TO DECIMAL");
         printf("\n                              25. DECIMAL TO BINARY");
         printf("\n                              26. LEAP YEAR");
@@ -239,6 +240,16 @@ int main()
                 getchar();
                 break;
             case 21:
+                matrixAdd();
+                // getchar();
+                getchar();
+                break;
+            case 22:
+                matrixSub();
+                getchar();
+                
+                break;
+            case 23:
                 printf("\nEnter number to find its power: ");
                 scanf("%d",&c);
 
@@ -262,16 +273,7 @@ int main()
                 printf("\n%ld is binary equivalent of decimal %d",decToBin(d),d);
                 getchar();
                 break;
-            case 22:
-                matrixAdd();
-                // getchar();
-                getchar();
-                break;
-            case 23:
-                matrixSub();
-                getchar();
-                
-                break;
+            
             case 26:
                 leapYear();
                 getchar();
