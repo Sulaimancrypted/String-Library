@@ -346,12 +346,12 @@ int binToDec(long long n) {
         dec += rem * power(2, i);
         ++i;
     }
-    
+    getchar();
     return dec;
 }
 
-long long decToBin(int n) {
-  long long bin = 0;
+long int decToBin(int n) {
+  long int bin = 0;
   int rem, i = 1;
 
   while (n!=0) {
@@ -360,8 +360,8 @@ long long decToBin(int n) {
     bin += rem * i;
     i *= 10;
   }
-
-  return bin;
+    getchar();
+    return bin;
 }
 
 void matrixAdd(){

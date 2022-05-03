@@ -256,7 +256,7 @@ int main()
                 printf("\nWhat power of number %d do you want to find? : ",c);
                 scanf("%d",&d);
 
-                printf("\n%d is the power of %d",power(c,d),c);
+                printf("\n%d is the power of %d to %d",power(c,d),c,d);
                 getchar();
 
                 break;
@@ -265,7 +265,6 @@ int main()
                 scanf("%ld",&c);
                 printf("\n%d is decimal equivalent of binary %ld",binToDec(c),c);
                 getchar();
-
                 break;
             case 25:
                 printf("\nEnter decimal number to find its equivalent binary number: ");
