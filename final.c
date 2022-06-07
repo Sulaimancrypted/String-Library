@@ -1,4 +1,7 @@
-#include "D:\BCA\SEM - 4\ST\String Library\library.c"
+#include<stdio.h>
+#include"mylib.h"
+
+
 int main()
 {
     int opt = 1,d,e;
